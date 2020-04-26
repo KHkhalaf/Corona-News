@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:customControls="clr-namespace:CoronaNews.CustomControls;assembly=CoronaNews"
+             x:Class="CoronaNews.CustomControl.CustomImageEntry">
+    <ContentView.Content>
+        <StackLayout
+            Spacing="2"
+            HorizontalOptions="{Binding HorizontalOptions, Mode=TwoWay}"
+            VerticalOptions="{Binding VerticalOptions, Mode=TwoWay}"
+            Padding="{Binding LayoutPadding, Mode=TwoWay}"
+            >
+            <StackLayout Orientation="Horizontal" Spacing="0">
+                <customControls:CustomImage
+                    x:Name="imgLeft" 
+                    HorizontalOptions="Start" 
+                    VerticalOptions="Center"
+                    Source="{Binding LeftImage, Mode=TwoWay}" 
+                    IsVisible="False" 
+                    />
+                <customControls:CustomEntry
+                    x:Name="oEntry" 
+                    HorizontalOptions="FillAndExpand"
+                    FontFamily="{Binding FontFamily, Mode=TwoWay}" 
+                    FontSize="{Binding FontSize, Mode=TwoWay}" 
+                    Text="{Binding Text, Mode=TwoWay}" 
+                    TextColor="{Binding TextColor, Mode=TwoWay}"
+                    Placeholder="{Binding Placeholder, Mode=TwoWay}" 
+                    PlaceholderColor="{Binding PlaceholderColor, Mode=TwoWay}"
+                    MaxLength="{Binding MaxLength, Mode=TwoWay}"
+                    IsPassword="{Binding IsPassword, Mode=TwoWay}"
+                    Keyboard="{Binding Keyboard, Mode=TwoWay}"
+                    IsEnabled="{Binding IsEnabled, Mode=TwoWay}"
+                    />
+                <customControls:CustomImage
+                    x:Name="imgRight" 
+                    HorizontalOptions="End" 
+                    VerticalOptions="Center"
+                    Source="{Binding RightImage, Mode=TwoWay}"
+                    IsVisible="False" 
+                    />
+            </StackLayout>
+
+            <BoxView
+                x:Name="BottomBorder"
+                BackgroundColor="{Binding LineColor}"
+                HeightRequest="2"
+                Margin="0"
+                HorizontalOptions="FillAndExpand"
+                />
+            <BoxView
+                x:Name="HiddenBottomBorder"
+                BackgroundColor="{Binding AccentColor}"
+                HeightRequest="2"
+                Margin="0"
+                WidthRequest="0"
+                HorizontalOptions="Center"
+            />
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

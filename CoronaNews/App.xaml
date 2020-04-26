@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CoronaNews.App">
+    <Application.Resources>
+
+        <Color x:Key="ToolbarBackground">#FFFFFF</Color>
+        <x:Double x:Key="ToolbarHeight">60</x:Double>
+        <Color x:Key="PageBackground">#FFFFFF</Color>
+
+        <OnPlatform x:TypeArguments="x:String" x:Key="Oswald-Bold"
+                        Android="Oswald-Bold.ttf#Oswald-Bold"
+                        iOS="Oswald-Bold" />
+
+        <OnPlatform x:TypeArguments="x:String" x:Key="Oswald-BoldItalic"
+                        Android="Oswald-BoldItalic.ttf#Oswald-BoldItalic"
+                        iOS="Oswald-BoldItalic" />
+
+        <OnPlatform x:TypeArguments="x:String" x:Key="Oswald-Demi-BoldItalic"
+                        Android="Oswald-Demi-BoldItalic.ttf#Oswald-Demi-BoldItalic"
+                        iOS="Oswald-Demi-BoldItalic" />
+
+        <OnPlatform x:TypeArguments="x:String" x:Key="Oswald-DemiBold"
+                        Android="Oswald-DemiBold.ttf#Oswald-DemiBold"
+                        iOS="Oswald-DemiBold" />
+
+        <OnPlatform x:TypeArguments="x:String" x:Key="Oswald-Extra-LightItalic"
+                        Android="Oswald-Extra-LightItalic.ttf#Oswald-Extra-LightItalic"
+                        iOS="Oswald-Extra-LightItalic" />
+
+        <OnPlatform x:TypeArguments="x:String" x:Key="Oswald-ExtraLight"
+                        Android="Oswald-ExtraLight.ttf#Oswald-ExtraLight"
+                        iOS="Oswald-ExtraLight" />
+
+        <OnPlatform x:TypeArguments="x:String" x:Key="Oswald-Heavy"
+                        Android="Oswald-Heavy.ttf#Oswald-Heavy"
+                        iOS="Oswald-Heavy" />
+
+        <OnPlatform x:TypeArguments="x:String" x:Key="Oswald-HeavyItalic"
+                        Android="Oswald-HeavyItalic.ttf#Oswald-HeavyItalic"
+                        iOS="Oswald-HeavyItalic" />
+
+        <OnPlatform x:TypeArguments="x:String" x:Key="Oswald-Light"
+                        Android="Oswald-Light.ttf#Oswald-Light"
+                        iOS="Oswald-Light" />
+
+        <OnPlatform x:TypeArguments="x:String" x:Key="Oswald-LightItalic"
+                        Android="Oswald-LightItalic.ttf#Oswald-LightItalic"
+                        iOS="Oswald-LightItalic" />
+
+        <OnPlatform x:TypeArguments="x:String" x:Key="Oswald-Medium"
+                        Android="Oswald-Medium.ttf#Oswald-LightItalic"
+                        iOS="Oswald-LightItalic" />
+
+        <OnPlatform x:TypeArguments="x:String" x:Key="Oswald-MediumItalic"
+                        Android="Oswald-MediumItalic.ttf#Oswald-MediumItalic"
+                        iOS="Oswald-MediumItalic" />
+
+        <OnPlatform x:TypeArguments="x:String" x:Key="Oswald-Regular"
+                        Android="Oswald-Regular.ttf#Oswald-Regular"
+                        iOS="Oswald-Regular" />
+
+        <OnPlatform x:TypeArguments="x:String" x:Key="Oswald-RegularItalic"
+                        Android="Oswald-RegularItalic.ttf#Oswald-RegularItalic"
+                        iOS="Oswald-RegularItalic" />
+
+        <OnPlatform x:TypeArguments="x:String" x:Key="Oswald-Stencil"
+                        Android="Oswald-Stencil.ttf#Oswald-Stencil"
+                        iOS="Oswald-Stencil" />
+
+
+
+        <x:Double x:Key="PageBottomButtonFontSize">20</x:Double>
+        <x:Double x:Key="BottomButtonHeight">60</x:Double>
+        <x:Double x:Key="DefaultFontSize">16</x:Double>
+
+        <x:Double x:Key="BigTitleFontSize">25</x:Double>
+        <x:Double x:Key="MainPageDescTitleFontSize">21</x:Double>
+        <x:Double x:Key="BigTitleFontSizeThree">19</x:Double>
+        <x:Double x:Key="MainPageDescTitleFontSizeFour">16</x:Double>
+        <x:Double x:Key="ListViewFontSize">15</x:Double>
+
+        <!-- colors -->
+        <Color x:Key="MainBackgroundColor">#FFFFFF</Color>
+        <Color x:Key="ThemeColor">#FFFFFF</Color>
+        <Color x:Key="VirusColor">#36D39A</Color>
+
+        <Color x:Key="DisableColor">#BBBBBB</Color>
+        <Color x:Key="BlackColor">#000000</Color>
+
+        <Color x:Key="DefaultFontColor">#707070</Color>
+        <Color x:Key="RedFontColor">#FF0000</Color>
+        <Color x:Key="GreenFontColor">#36D39A</Color>
+        <Color x:Key="ListviewItemBG">#F5EDED</Color>
+
+
+
+
+        <!-- custom styles -->
+        <Style x:Key="BottomButton" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="{StaticResource VirusColor}" />
+            <Setter Property="TextColor" Value="{StaticResource ThemeColor}" />
+            <Setter Property="BorderRadius" Value="0" />
+            <Setter Property="FontFamily" Value="{StaticResource Oswald-Bold}" />
+            <Setter Property="FontSize" Value="{StaticResource PageBottomButtonFontSize}" />
+            <Setter Property="HeightRequest" Value="{StaticResource BottomButtonHeight}" />
+            <Setter Property="VerticalOptions" Value="FillAndExpand" />
+        </Style>
+
+
+        <Style x:Key="MainPageRowZeroTitle" TargetType="Label">
+            <Setter Property="FontFamily" Value="{StaticResource Oswald-Bold}" />
+            <Setter Property="FontSize" Value="{StaticResource BigTitleFontSize}" />
+            <Setter Property="HorizontalTextAlignment" Value="Center" />
+            <Setter Property="VerticalTextAlignment" Value="Center" />
+            <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+            <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        </Style>
+
+        <Style x:Key="MainPageRowOneLabel" TargetType="Label">
+            <Setter Property="FontFamily" Value="{StaticResource Oswald-Light}" />
+            <Setter Property="FontSize" Value="{StaticResource MainPageDescTitleFontSize}" />
+            <Setter Property="HorizontalTextAlignment" Value="Center" />
+            <Setter Property="VerticalTextAlignment" Value="Center" />
+            <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+            <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        </Style>
+
+        <Style x:Key="MainPageRowThreeLabel" TargetType="Label">
+            <Setter Property="FontFamily" Value="{StaticResource Oswald-Bold}" />
+            <Setter Property="FontSize" Value="{StaticResource BigTitleFontSizeThree}" />
+            <Setter Property="HorizontalTextAlignment" Value="Center" />
+            <Setter Property="VerticalTextAlignment" Value="Center" />
+            <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+            <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        </Style>
+
+        <Style x:Key="MainPageRowFourLabel" TargetType="Label">
+            <Setter Property="FontFamily" Value="{StaticResource Oswald-Light}" />
+            <Setter Property="FontSize" Value="{StaticResource MainPageDescTitleFontSizeFour}" />
+            <Setter Property="HorizontalTextAlignment" Value="Center" />
+            <Setter Property="VerticalTextAlignment" Value="Center" />
+            <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+            <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        </Style>
+
+
+        <Style x:Key="ListViewLabel" TargetType="Label">
+            <Setter Property="FontFamily" Value="{StaticResource Oswald-Light}" />
+            <Setter Property="FontSize" Value="{StaticResource ListViewFontSize}" />
+            <Setter Property="HorizontalTextAlignment" Value="Start" />
+            <Setter Property="TextColor" Value="Black" />
+            <Setter Property="VerticalTextAlignment" Value="Center" />
+            <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+            <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        </Style>
+
+        <Style x:Key="NoInternetLabel" TargetType="Label">
+            <Setter Property="FontFamily" Value="{StaticResource Oswald-Light}" />
+            <Setter Property="FontSize" Value="17" />
+            <Setter Property="HorizontalTextAlignment" Value="Center" />
+            <Setter Property="TextColor" Value="Black" />
+            <Setter Property="VerticalTextAlignment" Value="Center" />
+            <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+            <Setter Property="Margin" Value="25" />
+        </Style>
+
+
+    </Application.Resources>
+</Application>

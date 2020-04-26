@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:customControl="clr-namespace:CoronaNews.CustomControl;assembly=CoronaNews"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             x:Class="CoronaNews.Views.Detail"  
+             SystemPaddingSides="All"
+             BackgroundInputTransparent="False">
+    <Frame CornerRadius="10" Margin="20,50" Padding="0" BackgroundColor="White">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+
+            <Grid Grid.Row="0"  BackgroundColor="{StaticResource ListviewItemBG}" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="8*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackLayout Orientation="Horizontal" Grid.Row="0" Margin="10">
+                    <Image  Source="{Binding countryInfo.flag}" Aspect="AspectFit" WidthRequest="50" HeightRequest="50" />
+                    <Label Style="{StaticResource ListViewLabel}" Text="{Binding country}" />
+                </StackLayout>
+
+
+                <ContentView Grid.Column="1" Margin="-20" Padding="20,0" HorizontalOptions="End">
+                    <Image  Margin="8" Source="exit"  Aspect="AspectFit" />
+                    <ContentView.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="btnClose_Tapped" />
+                    </ContentView.GestureRecognizers>
+                </ContentView>
+            </Grid>
+
+            <StackLayout Grid.Row="1" Margin="10">
+                <Label Style="{StaticResource ListViewLabel}" Text="{Binding casesString}" />
+                <Label Style="{StaticResource ListViewLabel}" Text="{Binding todayCasesString}" />
+                <Label Style="{StaticResource ListViewLabel}" Text="{Binding deathsString}" />
+                <Label Style="{StaticResource ListViewLabel}" Text="{Binding todayDeathsString}" />
+                <Label Style="{StaticResource ListViewLabel}" Text="{Binding recoveredString}" />
+                <Label Style="{StaticResource ListViewLabel}" Text="{Binding activeString}" />
+                <Label Style="{StaticResource ListViewLabel}" Text="{Binding criticalString}" />
+                <Label Style="{StaticResource ListViewLabel}" Text="{Binding casesPerOneMillionString}" />
+                <Label Style="{StaticResource ListViewLabel}" Text="{Binding deathsPerOneMillionString}" />
+                <Label Style="{StaticResource ListViewLabel}" Text="{Binding testsString}" />
+                <Label Style="{StaticResource ListViewLabel}" Text="{Binding testsPerOneMillionString}" />
+            </StackLayout>
+
+        </Grid>
+    </Frame>
+</pages:PopupPage>
