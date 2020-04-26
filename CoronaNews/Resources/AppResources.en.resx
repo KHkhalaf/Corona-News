@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ActiveCases" xml:space="preserve">
-    <value>ActiveCases</value>
+    <value>The remaining cases</value>
   </data>
   <data name="App_StopButton" xml:space="preserve">
     <value>Try Again</value>

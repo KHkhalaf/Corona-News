@@ -33,3 +33,4 @@ G:\courses\xamarin\Some Projects\CoronaNews\CoronaNews\obj\Release\netstandard2.
 G:\courses\xamarin\Some Projects\CoronaNews\CoronaNews\obj\Release\netstandard2.0\CoronaNews.dll
 G:\courses\xamarin\Some Projects\CoronaNews\CoronaNews\obj\Release\netstandard2.0\ref\CoronaNews.dll
 G:\courses\xamarin\Some Projects\CoronaNews\CoronaNews\obj\Release\netstandard2.0\CoronaNews.pdb
+G:\courses\xamarin\Some Projects\CoronaNews\CoronaNews\obj\Release\netstandard2.0\CoronaNews.csprojAssemblyReference.cache
